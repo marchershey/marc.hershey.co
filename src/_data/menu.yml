@@ -1,0 +1,42 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: about me
+    entries:
+      - title: email
+        url: mailto:hello@hershey.co
+      - title: x/@marc_hershey
+        url: https://x.com/marc_hershey
+      - title: github/@marchershey
+        url: https://github.com/marchershey
+      - title: /rss
+        url: feed.xml
+
+  - title: blog
+    post_list:
+      limit: 1
+      tags: blog
+      show_more: true
+      show_more_text: view all...
+      show_more_url: archive
+
+  - title: tutorials
+    post_list:
+      limit: 1
+      category: tutorials
+
+  # - title: posts by category
+  #   post_list:
+  #     category: example2
+  #     show_more: true
+  #     show_more_text: See more posts...
+  #     show_more_url: example2-archive.html
+
+  # - title: another list
+  #   entries:
+  #     - title: with subitems
+  #       entries:
+  #         - title: with subsubitems
+  #         - title: example page
+  #           url: about
