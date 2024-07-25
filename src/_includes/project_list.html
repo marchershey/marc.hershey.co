@@ -1,0 +1,14 @@
+{%-if include.category-%} {%-assign projects = site.categories[include.category]-%} {%-else-%} {%-assign projects = site.projects-%} {%-endif-%} {%-if include.limit and projects.size > include.limit-%} {%-assign limit_exceeded = true-%} {%-else-%} {%-assign limit_exceeded = false-%} {%-endif-%} {%- if projects.size > 0 -%}
+<ul>
+  {%- for project in projects limit: include.limit -%}
+  <li>
+    <a href="{{ project.url | relative_url }}">{{ project.title | downcase }}</a>
+    {% for tag in project.tags %}
+    <span>[{{- tag -}}]</span>
+    {% endfor %}
+  </li>
+  {%- endfor -%} {%- if include.show_more and limit_exceeded -%}
+  <li><a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a></li>
+  {%- endif -%}
+</ul>
+{%- endif -%}

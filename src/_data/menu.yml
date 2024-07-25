@@ -5,26 +5,35 @@ entries:
   - title: about me
     entries:
       - title: email
-        url: mailto:hello@hershey.co
-      - title: x/@marc_hershey
-        url: https://x.com/marc_hershey
-      - title: github/@marchershey
+        url: /email
+      - title: github
         url: https://github.com/marchershey
-      - title: /rss
-        url: feed.xml
+      - title: x/twitter
+        url: https://x.com/marc_hershey
+      - title: youtube (personal)
+        url: https://www.youtube.com/@MarcHershey
+      - title: youtube (gaming)
+        url: https://www.youtube.com/@sparkkstv
+
+  - title: my projects
+    project_list:
+      limit: 5
+      # show_more: true
+      # show_more_text: more projects...
+      # show_more_url: projects
 
   - title: blog
     post_list:
-      limit: 1
-      tags: blog
+      limit: 5
+      category: blog
       show_more: true
-      show_more_text: view all...
-      show_more_url: archive
+      show_more_text: more blog posts...
+      show_more_url: blog
 
-  - title: tutorials
-    post_list:
-      limit: 1
-      category: tutorials
+  - title: extras
+    entries:
+      - title: rss
+        url: feed.xml
 
   # - title: posts by category
   #   post_list:

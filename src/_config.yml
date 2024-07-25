@@ -1,27 +1,26 @@
-title: marc.hershey.co # name of the site
-author: marc hershey # name of site's author
-email: hello@hershey.co # email of site's author
-url: https://localhost:4000 # root address of the site
-baseurl: '/' # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: > # description of the site (multiple lines allowed)
-  my personal piece of the internet, old school style.
-
-permalink: /blog/:slug
-
-favicon: 'logo.png' # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
-
-theme: no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
-
+# name of the site
+title: marc.hershey.co
+description: my piece of the internet
+author: marc hershey
+email: hello@hershey.co
+url: https://localhost:4000
+baseurl: ''
+favicon: 'logo.png'
+theme: no-style-please
 theme_config:
   appearance: 'light' # can be "light", "dark" or "auto"
-  back_home_text: '< go back' # customize text for homepage link in post layout
+  back_home_text: '< back' # customize text for homepage link in post layout
   date_format: '%Y-%m-%d' # customize how date is formatted
   show_description: true # show blog description in home page
-
 sass:
   style: :compressed
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+permalink: /:categories/:slug
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name
